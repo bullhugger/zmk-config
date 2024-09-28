@@ -52,5 +52,20 @@
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
+                combo_layer {
+// ------------------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |                    |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |                    |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |                    | ENT |     | ALT |
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans                 &trans &trans &mmv U &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans                 &trans &mmv L &mmv D & mmv R &trans &trans
+   &trans &trans &trans &trans &trans &trans &none     $none &trans &trans &trans &trans &trans &trans
+                 &kp LALT &trans &kp SPACE                   &kp RET  &trans  &kp LGUI
+                        >;
+
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                };
         };
 };
