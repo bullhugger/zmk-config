@@ -1,0 +1,12 @@
+/ {
+    behaviors {
+        mmv {
+            compatible = "zmk,behavior-mouse-move";
+            label = "Mouse Move";
+        };
+        inc_dec_kp {
+            compatible = "zmk,behavior-inc-dec-kp";
+            label = "Increment/Decrement Key Press";
+        };
+    };
+};
