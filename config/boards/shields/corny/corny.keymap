@@ -61,7 +61,7 @@
                         bindings = <
    &trans &trans &trans &trans &trans &trans                 &trans &trans &mmv U &trans &trans &trans
    &trans &trans &trans &trans &trans &trans                 &trans &mmv L &mmv D & mmv R &trans &trans
-   &trans &trans &trans &trans &trans &trans &none     $none &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans &none     &none &trans &trans &trans &trans &trans &trans
                  &kp LALT &trans &kp SPACE                   &kp RET  &trans  &kp LGUI
                         >;
 
