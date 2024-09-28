@@ -59,8 +59,8 @@
 // | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans                 &trans &trans &mmv U &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans                 &trans &mmv L &mmv D & mmv R &trans &trans
+   &trans &trans &trans &trans &trans &trans                 &trans &trans &kp C_MOUSE_UP &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans                 &trans &kp C_MOUSE_LEFT &kp C_MOUSE_DOWN &kp C_MOUSE_RIGHT &trans &trans
    &trans &trans &trans &trans &trans &trans &none     &none &trans &trans &trans &trans &trans &trans
                  &kp LALT &trans &kp SPACE                   &kp RET  &trans  &kp LGUI
                         >;
