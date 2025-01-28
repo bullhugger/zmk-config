@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/bt.h>
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10
+#define MOUSE_L 3
 
 / {
         keymap {
@@ -31,10 +32,10 @@
 // | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &kp N1  &kp N2 &kp N3    &kp N4        &kp N5                       &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
-   &kp LCTRL  &kp F12 &kp F5 &kp COLON &kp DEL       &kp HOME                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
-   &kp LSHFT  &kp C_PREV &kp C_NEXT &kp C_PP &kp DOT &kp END   &bootloader  &none &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
-                                 &kp LALT &trans  &kp SPACE                       &kp RET  &mo 3  &kp LGUI
+   &kp TAB    &kp N1     &kp N2     &kp N3    &kp N4  &kp   N5                    &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
+   &kp LCTRL  &kp F12    &kp F5     &kp COLON &kp DEL &kp HOME                    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
+   &kp LSHFT  &kp C_PREV &kp C_NEXT &kp C_PP  &kp DOT &kp  END &bootloader  &none &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
+                                    &kp LALT &trans  &kp SPACE                    &kp RET  &mo 3  &kp LGUI
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -47,13 +48,30 @@
 // | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
                         bindings = <
-   &kp  TAB   &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                       &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                    &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5  &bt BT_CLR_ALL  &bootloader &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                                                     &kp LALT     &mo 3 &kp SPACE                    &kp RET  &trans   &kp LGUI
+   &kp  TAB   &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp    PRCNT                             &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                             &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp       F5 &bt BT_CLR_ALL  &bootloader &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                                                &kp LALT &to MOUSE_L &kp SPACE                             &kp RET  &trans   &kp LGUI
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
+
+                mouse_layer {
+// ------------------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |                    |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |                    |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |                    | ENT |     | ALT |
+                        bindings = <
+   &kp  TAB   &trans &trans &mkp LCLK   &trans  &trans             &trans      &trans     &mmv MOVE_UP       &trans     &trans &trans
+   &kp LCTRL  &trans &trans &mkp MCLK &mkp RCLK &trans             &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans
+   &kp LSHFT  &trans &trans &mkp MB4  &mkp MB5  &trans &none &none &trans &trans         &trans         &trans          &trans &trans
+                        &kp LALT &mo 3 &kp SPACE                   &kp RET  &trans   &kp LGUI
+                        >;
+
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                };
+
         };
 };
