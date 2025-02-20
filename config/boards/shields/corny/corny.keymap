@@ -114,7 +114,7 @@
 // | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
                         bindings = <
-   &kp  TAB   &trans &trans &mkp LCLK &msc_up &msc_down    &trans  &msc SCRL_UP   &mmv MOVE_UP  &msc SCRL_DOWN      &trans      &trans
+   &kp  TAB   &trans &trans &mkp LCLK &msc_up MOVE_Y(100) &msc_down MOVE_Y(-100)    &trans  &msc SCRL_UP   &mmv MOVE_UP  &msc SCRL_DOWN      &trans      &trans
    &kp LCTRL  &trans &trans &mkp MCLK &mkp RCLK &trans             &msc SCRL_LEFT &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_RIGHT &trans
    &kp LSHFT  &trans &trans &mkp MB4  &mkp MB5  &trans &none &none &trans             &trans         &trans         &trans          &trans      &trans
                         &kp LALT &mo 3 &kp SPACE                   &kp RET  &trans   &kp LGUI
