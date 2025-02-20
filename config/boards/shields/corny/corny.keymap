@@ -5,7 +5,57 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10
 #define MOUSE_L 3
-
+/ {
+    behaviors {
+        msc_up: mouse_scroll_up {
+            compatible = "zmk,behavior-mouse-scroll";
+            direction = "up";
+            distance = <1200>;
+            // Custom scroll speed (positive value for up)
+            MOVE_Y(100); // Adjust the value as needed
+        };
+        msc_down: mouse_scroll_down {
+            compatible = "zmk,behavior-mouse-scroll";
+            direction = "down";
+            distance = <1200>;
+            // Custom scroll speed (negative value for down)
+            MOVE_Y(-100); // Adjust the value as needed
+        };
+        msc_left: mouse_scroll_left {
+            compatible = "zmk,behavior-mouse-scroll";
+            direction = "left";
+            distance = <1200>;
+            // Custom scroll speed (negative value for left)
+            MOVE_X(-5); // Adjust the value as needed
+        };
+        msc_right: mouse_scroll_right {
+            compatible = "zmk,behavior-mouse-scroll";
+            direction = "right";
+            distance = <1200>;
+            // Custom scroll speed (positive value for right)
+            MOVE_X(5); // Adjust the value as needed
+        };
+        mmv_up: mouse_move_up {
+            compatible = "zmk,behavior-mouse-move";
+            direction = "up";
+            distance = <10>;
+        };
+        mmv_down: mouse_move_down {
+            compatible = "zmk,behavior-mouse-move";
+            direction = "down";
+            distance = <10>;
+        };
+        mmv_left: mouse_move_left {
+            compatible = "zmk,behavior-mouse-move";
+            direction = "left";
+            distance = <10>;
+        };
+        mmv_right: mouse_move_right {
+            compatible = "zmk,behavior-mouse-move";
+            direction = "right";
+            distance = <10>;
+        };
+    };
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -64,7 +114,7 @@
 // | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
                         bindings = <
-   &kp  TAB   &trans &trans &mkp LCLK   &msc SCRL_UP(1200) &msc SCRL_DOWN(1200)             &trans          &msc SCRL_UP   &mmv MOVE_UP  &msc SCRL_DOWN      &trans      &trans
+   &kp  TAB   &trans &trans &mkp LCLK &msc msc_up &msc msc_down    &trans  &msc SCRL_UP   &mmv MOVE_UP  &msc SCRL_DOWN      &trans      &trans
    &kp LCTRL  &trans &trans &mkp MCLK &mkp RCLK &trans             &msc SCRL_LEFT &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_RIGHT &trans
    &kp LSHFT  &trans &trans &mkp MB4  &mkp MB5  &trans &none &none &trans             &trans         &trans         &trans          &trans      &trans
                         &kp LALT &mo 3 &kp SPACE                   &kp RET  &trans   &kp LGUI
