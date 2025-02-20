@@ -64,7 +64,7 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
                         bindings = <
    &kp  TAB   &trans &trans &mkp MCLK &msc MOVE_Y(90) &trans     &trans  &msc SCRL_UP   &mmv MOVE_UP  &msc SCRL_DOWN      &trans      &trans
-   &kp LCTRL  &trans &trans &mkp LCLK &mkp RCLK &msc MOVE_Y(-90)             &msc MOVE_X(-90) &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc MOVE_X(90) &trans
+   &kp LCTRL  &trans &trans &mkp LCLK &mkp RCLK &msc MOVE_Y(-90)             &msc MOVE_X(-50) &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc MOVE_X(50) &trans
    &kp LSHFT  &trans &trans &mkp MB4  &mkp MB5  &trans &none &none &trans             &trans         &trans         &trans          &trans      &trans
                         &kp LALT &mo 3 &kp SPACE                   &kp RET  &trans   &kp LGUI
                         >;
