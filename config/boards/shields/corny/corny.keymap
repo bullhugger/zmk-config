@@ -37,7 +37,7 @@
                                     &kp LALT  &trans   &kp SPACE                   &kp RET  &mo 3    &kp LGUI
                         >;
 
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_INC C_BRI_DEC>;
                 };
 
                 raise_layer {
