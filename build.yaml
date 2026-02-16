@@ -14,6 +14,6 @@
 ---
 include:
   - board: xiao_ble
-    shield: corne_left
+    shield: corny_left
   - board: xiao_ble
-    shield: corne_right
+    shield: corny_right
