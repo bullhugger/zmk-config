@@ -3,4 +3,5 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    # Update to @main or a newer tag to get Node 24 support
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
