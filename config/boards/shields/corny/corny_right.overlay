@@ -5,11 +5,12 @@
 };
 &kscan0 {
     col-gpios
-        = <&xiao_d 4 GPIO_ACTIVE_HIGH> // Column 6 (Y, H, N)
-        , <&xiao_d 5 GPIO_ACTIVE_HIGH> // Column 7
-        , <&xiao_d 6 GPIO_ACTIVE_HIGH> // Column 8
-        , <&xiao_d 7 GPIO_ACTIVE_HIGH> // Column 9
-        , <&xiao_d 8 GPIO_ACTIVE_HIGH> // Column 10
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH> // Column 11 (BSPC, SQT, ESC)
+        = <&gpio0 10 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 8 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 10 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 6 GPIO_ACTIVE_HIGH>
         ;
 };
+
