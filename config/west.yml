@@ -11,6 +11,6 @@ manifest:
       import: app/west.yml
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: 194a0f81a38910403337f7669d0f36746815332c
+      revision: main
   self:
     path: config
