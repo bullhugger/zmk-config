@@ -58,10 +58,10 @@
 // | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
                         bindings = <
-   &kp  TAB   &trans &kp PG_UP &mkp MCLK &msc MOVE_Y(90)          &trans                          &trans           &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &trans          &trans
-   &kp LCTRL  &trans &kp PG_DN &mkp LCLK &mkp RCLK                &msc MOVE_Y(-90)                &msc MOVE_X(-50) &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc MOVE_X(50) &trans
-   &kp LSHFT  &kp C_BRI_UP  &kp C_BRI_DN &mkp MB4     &mkp MB5    &trans                          &kp C_VOL_UP     &kp C_VOL_DN &trans         &trans          &trans          &trans
-                                      &kp LALT        &trans &kp SPACE                            &kp RET  &trans   &kp LGUI
+   &kp  TAB   &trans        &kp PG_UP    &mkp MCLK &msc MOVE_Y(90)  &trans                        &trans           &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &trans          &trans
+   &kp LCTRL  &trans        &kp PG_DN    &mkp LCLK &mkp RCLK        &msc MOVE_Y(-90)              &msc MOVE_X(-50) &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc MOVE_X(50) &trans
+   &kp LSHFT  &kp C_BRI_UP  &kp C_BRI_DN &mkp MB4  &mkp MB5         &trans                        &kp C_VOL_UP     &kp C_VOL_DN   &trans         &trans          &trans          &trans
+                                      &kp LALT        &trans &kp SPACE                            &kp RET          &trans         &kp LGUI
                         >;
                 };
 
