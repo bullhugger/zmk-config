@@ -1,17 +1,12 @@
 #include "corny.dtsi"
 
-&default_transform {
-    col-offset = <7>; // Changed to 7 because the Left side now has 7 columns
-};
-
 &kscan0 {
-    col-gpios
-        = <&xiao_d 4 GPIO_ACTIVE_HIGH> // Column 7 (Inner: Y, H, N)
-        , <&xiao_d 5 GPIO_ACTIVE_HIGH> 
-        , <&xiao_d 6 GPIO_ACTIVE_HIGH> 
-        , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
-        , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH> 
-        , <&xiao_d 10 GPIO_ACTIVE_HIGH> // Column 13 (Outer: BSPC, SQT, ESC)
-        ;
+	col-gpios
+		= <&gpio0 10 GPIO_ACTIVE_HIGH>   //Col0
+		, <&gpio1 15 GPIO_ACTIVE_HIGH>   //Col1
+		, <&gpio1 14 GPIO_ACTIVE_HIGH>   //Col2
+		, <&gpio1 13 GPIO_ACTIVE_HIGH>   //Col3
+		, <&gpio1 12 GPIO_ACTIVE_HIGH>   //Col4
+		, <&gpio1 11 GPIO_ACTIVE_HIGH>   //Col5
+		;
 };
