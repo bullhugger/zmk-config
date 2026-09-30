@@ -22,6 +22,7 @@
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp PSCRN  &kp CAPS &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LALT &mo 1 &kp SPACE                     &kp RET &mo 2 &kp LGUI
                         >;
+                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
                 lower_layer {
 // ------------------------------------------------------------------------------------------------
@@ -35,6 +36,7 @@
    &kp LSHFT  &kp C_PREV &kp C_NEXT &kp C_PP  &kp BSPC &kp  END &bootloader &none &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
                                     &kp LALT  &trans   &kp SPACE                   &kp RET  &mo 3    &kp LGUI
                         >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
                 raise_layer {
@@ -49,6 +51,7 @@
    &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5     &bt BT_CLR_ALL  &bootloader   &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                                                 &kp LALT &mo MOUSE_L &kp SPACE                             &kp RET  &trans   &kp LGUI
                         >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
                 mouse_layer {
@@ -63,7 +66,7 @@
    &kp LSHFT  &kp C_BRI_UP  &kp C_BRI_DN &mkp MB4  &mkp MB5         &trans     &none   &none      &kp C_VOL_UP     &kp C_VOL_DN   &trans         &trans          &trans          &trans
                                       &kp LALT        &trans &kp SPACE                            &kp RET          &trans         &kp LGUI
                         >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
-
         };
 };
